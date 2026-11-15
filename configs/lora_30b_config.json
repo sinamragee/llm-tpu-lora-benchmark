@@ -1,5 +1,8 @@
 {
-  "model_family": "Qwen-32B / Gemma-27B",
+  "supported_models": [
+    "google/gemma-4-31B-it",
+    "Qwen/Qwen3.8-27B"
+  ],
   "precision": "bfloat16",
   "max_seq_length": 2048,
   "lora_config": {
