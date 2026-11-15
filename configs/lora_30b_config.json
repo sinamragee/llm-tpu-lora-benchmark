@@ -1,0 +1,17 @@
+{
+  "model_family": "Qwen-32B / Gemma-27B",
+  "precision": "bfloat16",
+  "max_seq_length": 2048,
+  "lora_config": {
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  },
+  "xla_settings": {
+    "fsdp_enabled": true,
+    "gradient_checkpointing": true,
+    "per_device_batch_size": 2,
+    "gradient_accumulation_steps": 8
+  }
+}
